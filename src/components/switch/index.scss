@@ -1,0 +1,49 @@
+@import '../../theme/theme.scss';
+
+.switch{
+  position: absolute;
+  right: 10px;
+  width: 100px;
+  cursor: pointer;
+
+  .title{
+    font-size: 14px;
+    @include themify() {
+      color: themed('primaryColor');
+    }
+
+    &.sub-item{
+      @include themify() {
+        color: themed('primaryColor');
+      }
+    }
+  }
+
+  .gradient{
+    position: absolute;
+    width: 60px;
+    height: 26px;
+    right: 0px;
+    background: linear-gradient(#FF5B94, #8441A4);
+    border-radius: 12px;
+
+    &.on{
+      background: linear-gradient(#6EE2F5, #6454F0);
+    }
+
+    .circle{
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: color('white');
+      &.on{
+        right: 1px;
+      }
+      &.off{
+        left: 1px;
+      }
+    }
+
+  }
+}

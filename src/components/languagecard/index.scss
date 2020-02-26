@@ -1,0 +1,16 @@
+@import '../../theme/theme.scss';
+
+.language-card{
+  width: 140px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  @include themify() {
+    background-color: themed('secondaryBgActiveColor');
+    color: themed('primaryColor');
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../theme/theme.scss';
+
+.switch-card{
+  width: 100%;
+  height: 48px;
+  display: flex;
+  position: relative;
+  padding-left: 17px;
+  border-radius: 3px;
+  &.sub-item{
+    @include themify() {
+      background-color: themed('secondaryBgActiveColor');
+    }
+    .text{
+      @include themify() {
+        color: themed('primaryColor');
+      }
+    }
+  }
+  .icon{
+    &.empty{
+      display: none;
+    }
+  }
+  .text{
+    margin-left: 40px;
+    &.icon-empty{
+      margin-left: 0px;
+    }
+    font-size: 14px;
+    @include themify() {
+      color: themed('secondaryColor');
+    }
+  }
+}

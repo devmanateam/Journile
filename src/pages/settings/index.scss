@@ -1,0 +1,130 @@
+@import '../../theme/theme.scss';
+$arrow-card-height: 47.99px;
+$arrow-card-margin-top: 8px;
+
+.vertical-margin{
+  height: $arrow-card-margin-top;
+}
+.settings{
+  .left-box{
+    min-width: 600px;
+    .search{
+      position: relative;
+      width: 100%;
+      height: 55px;
+      padding: 0 0 0 17px;
+      @include themify() {
+        background-color: themed('secondaryBgActiveColor');
+      }
+
+      .content{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        
+        .setting{
+          width: calc(100% - 60px);
+          height: $arrow-card-height;
+          font-size: 18px;
+          margin-left: 5px;
+        }
+      }
+    }
+    .items{
+      .item{
+        height: $arrow-card-height;
+        margin-top: $arrow-card-margin-top;
+        @include themify() {
+          background-color: themed('secondaryBgActiveColor');
+        }
+        &.theme{
+          margin-top: 20px;
+        }
+        &.monetise{
+          margin-top: 20px;
+        }
+        .card{
+          height: 48px;
+          border: 0px;
+          @include themify() {
+            background-color: themed('secondaryBgActiveColor');
+          }
+          .text{
+            font-size: 14px;
+            margin-left: 10px;
+            @include themify() {
+              color: themed('secondaryColor');
+            }
+          }
+          .theme-switch{
+            position: absolute;
+            right: 30px;
+            display: flex;
+            cursor: pointer;
+            .title{
+              display: flex;
+              font-size: 14px;
+              margin-right: 10px;
+              align-items: center;
+              @include themify() {
+                color: themed('secondaryColor');
+              }
+            }
+            .theme-icon{
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    // style for sub items
+    .sub-items{
+      width: 600px;
+      position: relative;
+      left: 610px;
+      top: -$arrow-card-height;
+
+      .money-method{
+        position: absolute;
+        right: 10px;
+        font-size: 14px;
+        text-align: right;
+        @include themify() {
+          color: themed('primaryColor');
+        }
+
+        .underline{
+          cursor: pointer;
+          padding-bottom: 5px;
+          margin-left: 5px;
+          text-decoration: underline;
+          @include themify() {
+            text-decoration-color: themed('secondaryColor');
+          }
+        }
+      }
+      .sub-desc{
+        font-size: 14px;
+        padding-left: 17px;
+        padding-bottom: 10px;
+        @include themify() {
+          background-color: themed('secondaryBgActiveColor');
+        }
+        @include themify() {
+          color: themed('secondaryColor');
+        }
+      }
+    }
+  }
+
+  .main{
+    width: 100%;
+    min-width: 620px;
+    margin-left: 20px;
+  }
+}
